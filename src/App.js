@@ -9,7 +9,7 @@ import { Route, Routes } from "react-router-dom";
 function App() {
   return (
     <Routes>
-      <Route index element={<MainComponent />} />
+      <Route index element={<Login />} />
       <Route path="/create-account" element={<CreateAccount />} />
       <Route path="/reset-password" element={<ForgotPassword />} />
     </Routes>
