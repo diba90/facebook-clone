@@ -4,6 +4,7 @@ import React from "react";
 import CreateAccount from "./components/CreateAccount";
 import ForgotPassword from "./components/ForgotPassword";
 import MainComponent from "./components/MainComponent";
+import Login from "./components/Login";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
