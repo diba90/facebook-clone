@@ -1,0 +1,36 @@
+.header__section {
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 5px 10px 21px #f3f3f3;
+}
+
+.header__logo {
+  width: 10%;
+}
+
+.header__logo > img {
+  width: 40px;
+}
+
+.header__clickable__element {
+  width: 70%;
+}
+
+.header__greeting__message {
+  width: 20%;
+  float: right;
+  display: flex;
+  text-align: right;
+  align-items: center;
+  justify-content: right;
+}
+
+/* .post_input_field {
+    width: 100%;
+    font-size: 30px;
+  } */

@@ -80,7 +80,7 @@ const CreateAccount = () => {
               >
                 <Button
                   component={RouterLink}
-                  to="/"
+                  to="/login"
                   variant="contained"
                   size="small"
                 >

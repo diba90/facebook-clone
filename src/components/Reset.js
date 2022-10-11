@@ -5,6 +5,7 @@ import Container from "@mui/material/Container";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
+import { Link as RouterLink } from "react-router-dom";
 
 const ForgotPassword = () => {
   const [isDisabled, setIsDisabled] = useState(true);
@@ -59,6 +60,22 @@ const ForgotPassword = () => {
                 size="medium"
               >
                 Send
+              </Button>
+            </Grid>
+          </Grid>
+          <Grid container justify="flex-end" spacing={4} sx={{ mt: "5px" }}>
+            <Grid
+              item
+              style={{ alignItems: "center", textAlign: "right" }}
+              xs={12}
+            >
+              <Button
+                component={RouterLink}
+                to="/login"
+                variant="contained"
+                size="small"
+              >
+                Sign In to Account
               </Button>
             </Grid>
           </Grid>
