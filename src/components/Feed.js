@@ -11,8 +11,9 @@ import Grid from "@mui/material/Grid";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 import IconButton from "@mui/material/IconButton";
-import { addLike, addDislike } from "../features/postSlice";
+import { addLikeDislike } from "../features/postSlice";
 import "./Feed.css";
+import { useNavigate } from "react-router-dom";
 
 const Feed = () => {
   var feedData = useSelector((state) => {
@@ -23,19 +24,12 @@ const Feed = () => {
     return state.user;
   });
 
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleLike = (postid) => {
     dispatch(
-      addLike({
-        id: postid,
-      })
-    );
-  };
-
-  const handleDislike = (postid) => {
-    dispatch(
-      addDislike({
+      addLikeDislike({
         id: postid,
       })
     );
@@ -64,16 +58,27 @@ const Feed = () => {
               {data?.pic && <img src={data?.pic} alt="Feed Image" />}
             </div>
             <div className="post_action_buttons">
-              <ThumbDownIcon
-                onClick={handleLike({ id: data.id })}
-                style={{ fontSize: "30px", float: "left" }}
-              />
-              <span className="post__like">{data?.like}</span>
-              <ThumbUpIcon
-                onClick={handleDislike({ id: data.id })}
-                style={{ fontSize: "30px", float: "right" }}
-              />
-              <span className="post__dislike">{data?.dislike}</span>
+              <Button
+                variant="text"
+                size="medium"
+                onClick={(e) => handleLike({ id: data.id })}
+              >
+                {data?.like ? (
+                  <ThumbUpIcon style={{ fontSize: "30px", float: "left" }} />
+                ) : (
+                  <ThumbUpIcon
+                    style={{
+                      fontSize: "30px",
+                      float: "left",
+                      color: "#767271",
+                    }}
+                  />
+                )}
+              </Button>
+
+              <span className="post__like">
+                {data?.like ? "You liked this post" : ""}
+              </span>
             </div>
           </div>
         ))}

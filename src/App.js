@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import store from "./app/store";
 import Login from "./components/Login";
-import Reset from "./components/Reset";
 import MainSocial from "./components/MainSocial";
 import Signup from "./components/Signup";
 import News from "./components/News";
@@ -18,7 +17,6 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/homeApp" element={<MainSocial />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/reset" element={<Reset />} />
         <Route path="/news" element={<News />} />
         <Route path="/*" element={<Login />} />
         <Route path="/createPost" element={<NewPost />} />

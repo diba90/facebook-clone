@@ -14,24 +14,21 @@ export const postSlice = createSlice({
     createPost: (state, action) => {
       state.post.push(action.payload);
     },
-    addLike: (state, action) => {
+    addLikeDislike: (state, action) => {
       state.post.map((item) => {
-        if (item.id === action.payload.id) {
-          item.like += 1;
-        }
-      });
-    },
-    addDislike: (state, action) => {
-      state.post.map((item) => {
-        if (item.id === action.payload.id) {
-          item.dislike += 1;
+        if (item.id === action.payload.id.id) {
+          if (item.like === false) {
+            item.like = true;
+          } else {
+            item.like = false;
+          }
         }
       });
     },
   },
 });
 
-export const { createPost, addLike, addDislike } = postSlice.actions;
+export const { createPost, addLikeDislike } = postSlice.actions;
 
 export const selectPost = (state) => state.post.post;
 

@@ -50,8 +50,7 @@ const NewPost = () => {
           content: content,
           creationdate: datetime,
           pic: path,
-          like: 0,
-          dislike: 0,
+          like: false,
         })
       );
     }

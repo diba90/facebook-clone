@@ -66,15 +66,17 @@ export default function Login() {
         if (userList && userList.length) {
           const getUsers = JSON.parse(localStorage.getItem("ListUsers"));
           getUsers.map((el) => {
+            console.log(el.email === email && el.password === password);
             if (el.email === email && el.password === password) {
               let firstname = el.first_name;
               let lastname = el.last_name;
+              setVisible(true);
+              setAlertSeverity("success");
+              setAlertText("Login Successfull. Redirecting...");
               setEmail("");
               setPassword("");
               setLoader(true);
               setVisible(true);
-              setAlertSeverity("success");
-              setAlertText("Login Successfull. Redirecting...");
               dispatch(
                 login({
                   email: email,
@@ -175,16 +177,7 @@ export default function Login() {
               </Button>
             </Grid>
             <Grid container style={{ flex: 1 }} spacing={4} sx={{ mt: "5px" }}>
-              <Grid item xs={5}>
-                <Button
-                  component={RouterLink}
-                  to="/reset"
-                  variant="text"
-                  size="small"
-                >
-                  Forgot password?
-                </Button>
-              </Grid>
+              <Grid item xs={5}></Grid>
               <Grid
                 item
                 style={{ alignItems: "center", textAlign: "right" }}
