@@ -8,6 +8,7 @@ import News from "./components/News";
 import NewPost from "./components/NewPost";
 import { Provider } from "react-redux";
 import { Route, Routes } from "react-router-dom";
+import MessageWindow from "./components/MessageWindow";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/homeApp" element={<MainSocial />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/news" element={<News />} />
+        <Route path="/messageModule" element={<MessageWindow />} />
         <Route path="/*" element={<Login />} />
         <Route path="/createPost" element={<NewPost />} />
       </Routes>

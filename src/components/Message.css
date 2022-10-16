@@ -1,0 +1,17 @@
+.message__block {
+  float: right;
+  width: auto;
+  margin: 14px 31px 0 24px;
+  display: block;
+  background: #f1f1f1;
+  border-radius: 20px;
+  padding: 14px 26px;
+}
+
+.message__text {
+  font-size: 16px;
+}
+
+.message__date {
+  font-size: 10px;
+}

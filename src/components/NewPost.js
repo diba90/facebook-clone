@@ -64,7 +64,7 @@ const NewPost = () => {
           <Grid item xs={12}>
             <TextField
               id="outlined-textarea"
-              label="What's on your mind !!"
+              placeholder="What's on your mind !!"
               multiline
               style={{
                 width: "100%",

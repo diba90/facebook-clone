@@ -65,8 +65,7 @@ export default function Login() {
       if (flag === true) {
         if (userList && userList.length) {
           const getUsers = JSON.parse(localStorage.getItem("ListUsers"));
-          getUsers.map((el) => {
-            console.log(el.email === email && el.password === password);
+          getUsers.find((el) => {
             if (el.email === email && el.password === password) {
               let firstname = el.first_name;
               let lastname = el.last_name;
@@ -87,12 +86,18 @@ export default function Login() {
                 })
               );
               setTimeout(() => {
+                setVisible(false);
                 navigate("/homeApp");
               }, 3000);
+              return true;
             } else {
               setVisible(true);
               setAlertSeverity("error");
               setAlertText("Incorrect email and password");
+              setTimeout(() => {
+                setVisible(false);
+              }, 3000);
+              return false;
             }
           });
         }

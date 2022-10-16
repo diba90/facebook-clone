@@ -51,7 +51,7 @@ const HeaderSocial = () => {
             />
           </RouterLink>
 
-          <RouterLink to="/news">
+          <RouterLink to="/messageModule">
             <MessageIcon style={{ fontSize: "40px", margin: "0 15px" }} />
           </RouterLink>
         </div>

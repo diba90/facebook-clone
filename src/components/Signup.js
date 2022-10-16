@@ -21,6 +21,7 @@ const Signup = () => {
   const [visible, setVisible] = useState(false);
   const [error, setError] = useState({});
   const [flag, setFlag] = useState(false);
+  const [show, setShow] = useState(false);
 
   var loginData = useSelector((state) => {
     return state.user;
@@ -50,6 +51,10 @@ const Signup = () => {
           setLastName("");
           setEmail("");
           setPassword("");
+          setTimeout(() => {
+            setVisible(false);
+            navigate("/login");
+          }, 3000);
         } else {
           localStorage.setItem("ListUsers", JSON.stringify(users));
           const addedUser = JSON.parse(localStorage.getItem("ListUsers"));
@@ -60,6 +65,10 @@ const Signup = () => {
           setLastName("");
           setEmail("");
           setPassword("");
+          setTimeout(() => {
+            setVisible(false);
+            navigate("/login");
+          }, 3000);
         }
       }
     }
@@ -92,10 +101,10 @@ const Signup = () => {
       password: "admin123",
     },
     {
-      first_name: "Radhika",
-      last_name: "Dutta",
-      email: "radhika@gmail.com",
-      password: "radhika123",
+      first_name: "Rakesh",
+      last_name: "Kumar",
+      email: "rakesh@gmail.com",
+      password: "rakesh",
     },
   ];
 
@@ -158,17 +167,6 @@ const Signup = () => {
             severity="success"
           >
             Account created successfully. Login to your account now
-            <IconButton
-              style={{ float: "right" }}
-              aria-label="close"
-              color="inherit"
-              size="small"
-              onClick={() => {
-                setVisible(false);
-              }}
-            >
-              <CloseIcon fontSize="inherit" />
-            </IconButton>
           </Alert>
         </Collapse>
         <Box sx={box_styles}>
