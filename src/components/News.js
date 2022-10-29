@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import HeaderSocial from "./HeaderSocial";
 import "./News.css";
+import NewsContent from "./NewsData.js";
 
 const News = () => {
   const [news, setNews] = useState(null);
@@ -12,15 +13,25 @@ const News = () => {
 
   useEffect(() => {
     setSpinner(true);
-    axios
-      .get(
-        "https://newsapi.org/v2/top-headlines?q=india&from=2022-10-09&sortBy=publishedAt&apiKey=7402b905d028412d8c162a111a7d4181"
-      )
-      .then((res) => {
-        setNews(res.data.articles);
-        setSpinner(false);
-      });
+    let timer = setTimeout(() => {
+      setNews(NewsContent.articles);
+      setSpinner(false);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+
+    // axios
+    //   .get(
+    //     "https://newsapi.org/v2/top-headlines?q=india&from=2022-10-09&sortBy=publishedAt&apiKey=7402b905d028412d8c162a111a7d4181"
+    //   )
+    //   .then((res) => {
+    //     setNews(res.data.articles);
+    //     setSpinner(false);
+    //   });
   }, []);
+
   return (
     <React.Fragment>
       <HeaderSocial />
