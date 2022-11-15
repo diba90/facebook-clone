@@ -26,7 +26,7 @@ const NewPost = () => {
 
   const dispatch = useDispatch();
 
-  const customId = Math.floor(Math.random() * 10 + 321);
+  const customId = Math.floor(Math.random() * 10 + 300);
 
   const handleSubmit = () => {
     if (content != "") {
@@ -43,6 +43,7 @@ const NewPost = () => {
       let datetime = creationdate + "   " + creationTime;
       setDisplayText("Add Photo for your Post");
       setContent("");
+      setPicUrl("");
       dispatch(
         createPost({
           id: customId,
