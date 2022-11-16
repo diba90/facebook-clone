@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import InputLabel from "@mui/material/InputLabel";
@@ -24,9 +24,13 @@ const NewPost = () => {
     return state.user;
   });
 
+  var postData = useSelector((state) => {
+    return state.post.post.length;
+  });
+
   const dispatch = useDispatch();
 
-  const customId = Math.floor(Math.random() * 10 + 300);
+  const customId = postData + 1;
 
   const handleSubmit = () => {
     if (content != "") {
@@ -61,7 +65,7 @@ const NewPost = () => {
     <React.Fragment>
       <HeaderSocial />
       <Grid item style={{ margin: "0 25%" }}>
-        <Grid container spacing={2}>
+        <Grid container spacing={4}>
           <Grid item xs={12}>
             <TextField
               id="outlined-textarea"
