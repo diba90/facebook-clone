@@ -1,8 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
@@ -10,15 +7,16 @@ import PhotoCamera from "@mui/icons-material/PhotoCamera";
 import IconButton from "@mui/material/IconButton";
 import Grid from "@mui/material/Grid";
 import Feed from "./Feed";
-import HeaderSocial from "./HeaderSocial";
+import Header from "./Header";
 import { useDispatch, useSelector } from "react-redux";
 import { createPost } from "../features/postSlice";
 
 const NewPost = () => {
   const [content, setContent] = useState("");
-  const [creationDate, setCreationDate] = useState("");
   const [picUrl, setPicUrl] = useState("");
   const [displayText, setDisplayText] = useState("Add Photo for your Post");
+
+  var path = "";
 
   var loginData = useSelector((state) => {
     return state.user;
@@ -33,11 +31,11 @@ const NewPost = () => {
   const customId = postData + 1;
 
   const handleSubmit = () => {
-    if (content != "") {
+    if (content !== "") {
       if (picUrl === "") {
-        var path = "";
+        path = "";
       } else {
-        var path = (window.URL || window.webkitURL).createObjectURL(picUrl);
+        path = (window.URL || window.webkitURL).createObjectURL(picUrl);
       }
       const fullname =
         loginData.user?.firstname + " " + loginData.user?.lastname;
@@ -63,7 +61,7 @@ const NewPost = () => {
 
   return (
     <React.Fragment>
-      <HeaderSocial />
+      <Header id={1} />
       <Grid item style={{ margin: "0 25%" }}>
         <Grid container spacing={4}>
           <Grid item xs={12}>

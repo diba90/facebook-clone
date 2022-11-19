@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import IconButton from "@mui/material/IconButton";
 import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
 import Button from "@mui/material/Button";
-import Avatar from "@mui/material/Avatar";
-import HomeIcon from "@mui/icons-material/HomeOutlined";
 import LogoutIcon from "@mui/icons-material/Logout";
 import NoteAddIcon from "@mui/icons-material/NoteAdd";
 import MessageIcon from "@mui/icons-material/Message";
@@ -16,9 +14,9 @@ import { Link as RouterLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../features/userSlice";
 import { useNavigate } from "react-router-dom";
+import "./css/Main.css";
 
-const HeaderSocial = () => {
-  const [flag, setFlag] = useState(0);
+const Header = (prop) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -39,11 +37,12 @@ const HeaderSocial = () => {
   };
 
   const button_selected = {
-    fontSize: "37px",
+    fontSize: "38px",
     margin: "0px 15px",
-    background: "rgb(196 202 175)",
+    background: "rgb(189 163 89)",
     borderRadius: "10px",
     padding: "4px",
+    color: "#ffffff",
   };
 
   const dispatch = useDispatch();
@@ -53,7 +52,7 @@ const HeaderSocial = () => {
     if (loginData.user === null) {
       navigate("/login");
     }
-  }, []);
+  }, [loginData.user, navigate]);
 
   const handleLogout = () => {
     dispatch(logout());
@@ -70,36 +69,25 @@ const HeaderSocial = () => {
           />
         </div>
         <div className="header__clickable__element">
-          <RouterLink
-            to="/createPost"
-            onClick={() => {
-              const flagVal = 1;
-              setFlag(flagVal);
-            }}
-          >
-            <NoteAddIcon style={flag === 1 ? button_selected : button_normal} />
-          </RouterLink>
-
-          <RouterLink
-            to="/news"
-            onClick={() => {
-              const flagVal = 2;
-              setFlag(flagVal);
-            }}
-          >
-            <ArticleOutlinedIcon
-              style={flag === 2 ? button_selected : button_normal}
+          <RouterLink to="/createPost">
+            <NoteAddIcon
+              id={1}
+              style={prop.id === 1 ? button_selected : button_normal}
             />
           </RouterLink>
 
-          <RouterLink
-            to="/messageModule"
-            onClick={() => {
-              const flagVal = 3;
-              setFlag(flagVal);
-            }}
-          >
-            <MessageIcon style={flag === 3 ? button_selected : button_normal} />
+          <RouterLink to="/news">
+            <ArticleOutlinedIcon
+              id={2}
+              style={prop.id === 2 ? button_selected : button_normal}
+            />
+          </RouterLink>
+
+          <RouterLink to="/messageModule">
+            <MessageIcon
+              id={3}
+              style={prop.id === 3 ? button_selected : button_normal}
+            />
           </RouterLink>
         </div>
         <div className="header__greeting__message">
@@ -122,6 +110,7 @@ const HeaderSocial = () => {
           </IconButton>
         </div>
       </div>
+
       <Dialog
         open={open}
         onClose={handleClose}
@@ -145,4 +134,4 @@ const HeaderSocial = () => {
   );
 };
 
-export default HeaderSocial;
+export default Header;

@@ -1,36 +1,80 @@
 const NewsContent = {
   status: "ok",
-  totalResults: 13,
+  totalResults: 15,
   articles: [
     {
-      source: { id: "abc-news", name: "ABC News" },
-      author: "The Associated Press",
-      title: "Indiana teacher with 'kill list' agrees to no-contact order",
-      description:
-        "A fifth-grade teacher in northwestern Indiana charged with felony intimidation after authorities say she told a student she had a “kill list” of students and staff has agreed to stay away from the school",
-      url: "https://abcnews.go.com/US/wireStory/indiana-teacher-kill-list-agrees-contact-order-92343709",
-      urlToImage:
-        "https://s.abcnews.com/images/US/abc_news_default_2000x2000_update_16x9_992.jpg",
-      publishedAt: "2022-10-29T16:47:24Z",
-      content:
-        "CROWN POINT, Ind. -- A fifth-grade teacher in northwestern Indiana charged with felony intimidation after authorities say she told a student she had a kill list of students and staff has agreed to st… [+1660 chars]",
-    },
-    {
-      source: { id: "google-news-in", name: "Google News (India)" },
-      author: "PTI",
+      source: {
+        id: "google-news-in",
+        name: "Google News (India)",
+      },
+      author: null,
       title:
-        "Passenger injured due to turbulence in SpiceJet flight dead, says airline",
+        "France Backs India, 3 Nations To Be Permanent UN Security Council Members",
       description:
-        "On May 1, SpiceJet's Mumbai-Durgapur flight encountered severe turbulence during its descent phase, injuring 14 passengers and three cabin crew members. This is reportedly the second death of a passenger in India due to severe flight turbulence.",
-      url: "https://economictimes.indiatimes.com/industry/transportation/airlines-/-aviation/passenger-injured-due-to-turbulence-in-spicejet-flight-dead-says-airline/articleshow/95167749.cms",
+        "France has reaffirmed its support for India, Germany, Brazil and Japan as permanent members in an expanded UN Security Council, underlining the need to take into account the emergence of new powers willing and able to assume the responsibility.",
+      url: "https://www.ndtv.com/india-news/france-backs-india-3-nations-to-be-permanent-un-security-council-members-3534609",
       urlToImage:
-        "https://img.etimg.com/thumb/msid-95167810,width-1070,height-580,imgsize-127550,overlay-economictimes/photo.jpg",
-      publishedAt: "2022-10-29T13:38:00+00:00",
+        "https://c.ndtvimg.com/2021-08/gg6u123_india-at-un-security-council-un-security-council-un-security-council-president_625x300_01_August_21.jpg",
+      publishedAt: "2022-11-19T05:27:00+00:00",
       content:
-        "Akbar Ansari, a passenger who was injured due to turbulence in a SpiceJet flight in early May, passed away last month. Family members of Ansari, who was 48 years old, said he was on ventilator suppor… [+2357 chars]",
+        "France backs India, Germany, Brazil, Japan as permanent members of UN Security Council\r\nUnited Nations: France has reaffirmed its support for India, Germany, Brazil and Japan as permanent members in … [+4342 chars]",
     },
     {
-      source: { id: "fortune", name: "Fortune" },
+      source: {
+        id: "google-news-in",
+        name: "Google News (India)",
+      },
+      author: "GK Web Desk",
+      title:
+        "Police carry out massive searches in Kashmir over threats to journalists",
+      description:
+        "<ol><li>Police carry out massive searches in Kashmir over threats to journalists  Greater Kashmir\r\n</li><li>Searches underway in J&K over terror threats to journalists, say cops  India Today\r\n</li><li>Mir Junaid calls on LG Sinha | Expresses concern over thre…",
+      url: "https://www.greaterkashmir.com/kashmir/police-carry-out-massive-searches-in-kashmir-in-journalists-threats-case",
+      urlToImage:
+        "https://gumlet.assettype.com/greaterkashmir%2F2021-09%2F7bf9365b-306b-4a9c-8df8-cb4de8cda58f%2FPolice_Line.jpg?w=1200&auto=format%2Ccompress&ogImage=true&enlarge=true",
+      publishedAt: "2022-11-19T03:44:37+00:00",
+      content:
+        "Massive searches in connection with investigation of case related to recent threat to journalists started by Police at 10 locations in Srinagar, Anantnag and Kulgam. Details shall be followed (sic), … [+34 chars]",
+    },
+    {
+      source: {
+        id: "google-news-in",
+        name: "Google News (India)",
+      },
+      author: "HT News Desk",
+      title:
+        "Rahul with ‘tukde tukde gang’, Gujarat riot-free because of Modi: Anurag Thakur",
+      description:
+        "The “carpet-bombing” campaigning comes a day ahead of Prime Minister Narendra Modi’s three-day visit to the state, during which he is scheduled to hold eight rallies. | Latest News India",
+      url: "https://www.hindustantimes.com/india-news/rahul-with-tukde-tukde-gang-gujarat-riot-free-because-of-modi-anurag-thakur-101668817150160.html",
+      urlToImage:
+        "https://images.hindustantimes.com/img/2022/11/19/1600x900/gujarat_election_anurag_thakur_1668819088855_1668819089016_1668819089016.jpg",
+      publishedAt: "2022-11-19T00:54:59+00:00",
+      content:
+        "Union minister Anurag Thakur on Friday targeted Congress leader Rahul Gandhi over his sustained attack on Vinayak Damodar Savarkar, saying the Wayanad MP was holding the 'Bharat Jodo Yatra' with the … [+1716 chars]",
+    },
+    {
+      source: {
+        id: "google-news-in",
+        name: "Google News (India)",
+      },
+      author: "India Today Web Desk",
+      title:
+        "Skyroot's Vikram-S rocket launched successfully, marks entry of private sector into Indian space program",
+      description:
+        "The mission marks the thumping entry of the private sector into the Indian space program on the lines of the US, Europe, and China.",
+      url: "https://www.indiatoday.in/science/story/skyroot-aerospace-vikram-s-launch-isro-private-sector-india-space-program-2298753-2022-11-18",
+      urlToImage:
+        "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202211/vikram-s_a.jpg?VersionId=izGinhymuDKVKb5zQUmj4v4cWycBwxKB",
+      publishedAt: "2022-11-18T06:36:06+00:00",
+      content:
+        "By India Today Web Desk: Skyroot Aerospace on Friday made history by launching India's first privately made rocket Vikram-S into space. The successful launch marks the entry of the private sector int… [+3021 chars]",
+    },
+    {
+      source: {
+        id: "fortune",
+        name: "Fortune",
+      },
       author: "Emma Hinchliffe, Paige McGlauflin",
       title:
         "Why a former SoftBank partner is tackling mid-career drop-off for working mothers",
@@ -43,7 +87,10 @@ const NewsContent = {
       content: "Skip to Content",
     },
     {
-      source: { id: "the-hindu", name: "The Hindu" },
+      source: {
+        id: "the-hindu",
+        name: "The Hindu",
+      },
       author: "Ananth Krishnan",
       title: "Dalai Lama’s close aides targeted on Pegasus spyware list",
       description:
@@ -56,7 +103,10 @@ const NewsContent = {
         "Several of the top India-based aides to the Tibetan spiritual leader, the Dalai Lama, figure on the list of potential targets for spying using the Pegasus spyware, according to a report on Thursday. … [+2399 chars]",
     },
     {
-      source: { id: "rte", name: "RTE" },
+      source: {
+        id: "rte",
+        name: "RTE",
+      },
       author: "RTÉ News",
       title: "UK continues with reopening plan despite concerns",
       description:
@@ -68,7 +118,10 @@ const NewsContent = {
         "British ministers are pushing on with a major easing of restrictions on Monday despite concerns over the Indian variant of coronavirus, as they were criticised for allowing the strain's import.\r\nPrim… [+5066 chars]",
     },
     {
-      source: { id: "the-times-of-india", name: "The Times of India" },
+      source: {
+        id: "the-times-of-india",
+        name: "The Times of India",
+      },
       author: "Rajat Pandit",
       title:
         "Army explores procurement of 350 light tanks for mountainous terrain after border standoff with China",
@@ -82,7 +135,10 @@ const NewsContent = {
         "Army explores procurement of 350 light tanks for mountainous terrain after border standoff with China\r\n<ul><li>News</li>\r\n<li>India News</li>\r\n<li>Army explores procurement of 350 light tanks for mou… [+58 chars]",
     },
     {
-      source: { id: "the-times-of-india", name: "The Times of India" },
+      source: {
+        id: "the-times-of-india",
+        name: "The Times of India",
+      },
       author: "Times Of India",
       title:
         "PBKS vs MI Live Score, IPL 2021: Mumbai Indians seek consistency; Punjab Kings eye return to winning ways",
@@ -96,7 +152,10 @@ const NewsContent = {
         "Ravi Bishnoi return on the cards?\r\nDeepak Hooda showed what he is capable of, but greater consistency would be needed from him if the team has to prosper. They bet on Australian pace imports Jhye Ric… [+3131 chars]",
     },
     {
-      source: { id: "the-times-of-india", name: "The Times of India" },
+      source: {
+        id: "the-times-of-india",
+        name: "The Times of India",
+      },
       author: "PTI",
       title:
         "Zydus Cadila gets DCGI nod for hepatitis drug for Covid-19 treatment",
@@ -109,7 +168,10 @@ const NewsContent = {
       content: null,
     },
     {
-      source: { id: "the-times-of-india", name: "The Times of India" },
+      source: {
+        id: "the-times-of-india",
+        name: "The Times of India",
+      },
       author: "Bloomberg",
       title: "Even record death toll may hide extent of India’s Covid crisis",
       description:
@@ -121,7 +183,10 @@ const NewsContent = {
       content: null,
     },
     {
-      source: { id: "the-times-of-india", name: "The Times of India" },
+      source: {
+        id: "the-times-of-india",
+        name: "The Times of India",
+      },
       author: "Dipak K Dash",
       title:
         "Government to provide 5 kg free food grains to poor for May & June",
@@ -134,7 +199,10 @@ const NewsContent = {
       content: null,
     },
     {
-      source: { id: "the-times-of-india", name: "The Times of India" },
+      source: {
+        id: "the-times-of-india",
+        name: "The Times of India",
+      },
       author: "TIMESOFINDIA.COM",
       title:
         "'Inappropriate': PM Modi objects to 'protocol break' during meeting; Delhi CM expresses regret",
@@ -147,7 +215,10 @@ const NewsContent = {
       content: null,
     },
     {
-      source: { id: "the-times-of-india", name: "The Times of India" },
+      source: {
+        id: "the-times-of-india",
+        name: "The Times of India",
+      },
       author: "Times Of India",
       title:
         "Coronavirus in India live updates: Zydus' Virafin gets DCGI nod for Covid treatment",
@@ -161,7 +232,10 @@ const NewsContent = {
         "Zydus Cadila gets DCGI nod for hepatitis drug for Covid-19 treatment\r\nMake Covid-19 vaccination affordable, accessible through Jan Aushadi scheme: IMA\r\nThe IMA has demanded that the Covid-19 vaccine … [+4487 chars]",
     },
     {
-      source: { id: "espn-cric-info", name: "ESPN Cric Info" },
+      source: {
+        id: "espn-cric-info",
+        name: "ESPN Cric Info",
+      },
       author: null,
       title: "I'm fighting my own benchmarks - R Ashwin | ESPNcricinfo.com",
       description:

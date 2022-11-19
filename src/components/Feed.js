@@ -12,7 +12,7 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 import IconButton from "@mui/material/IconButton";
 import { addLikeDislike } from "../features/postSlice";
-import "./Feed.css";
+import "./css/Feed.css";
 import { useNavigate } from "react-router-dom";
 
 const Feed = () => {

@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import HeaderSocial from "./HeaderSocial";
-import "./News.css";
+import Header from "./Header";
+import "./css/News.css";
 import NewsContent from "./NewsData.js";
 
 const News = () => {
@@ -34,7 +33,7 @@ const News = () => {
 
   return (
     <React.Fragment>
-      <HeaderSocial />
+      <Header id={2} />
       <Grid item style={{ margin: "0 25%" }}>
         <Grid container spacing={2}>
           <Grid item xs={12}>

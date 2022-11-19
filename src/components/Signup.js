@@ -11,7 +11,7 @@ import Alert from "@mui/material/Alert";
 import { Link as RouterLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import "./Signup.css";
+import "./css/Signup.css";
 
 const Signup = () => {
   const [firstName, setFirstName] = useState("");

@@ -1,11 +1,11 @@
 import React from "react";
-import HeaderSocial from "./HeaderSocial";
+import Header from "./Header";
 import Grid from "@mui/material/Grid";
 import MessageInput from "./MessageInput";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import { useSelector } from "react-redux";
-import "./Message.css";
+import "./css/Message.css";
 
 const MessageWindow = () => {
   var messageData = useSelector((state) => {
@@ -14,7 +14,7 @@ const MessageWindow = () => {
 
   return (
     <React.Fragment>
-      <HeaderSocial />
+      <Header id={3} />
       <Grid item style={{ margin: "0 25%" }}>
         <Grid container style={{ padding: "20px 0" }}>
           <h2 className="title text-3xl font-bold text-cyan-900">
