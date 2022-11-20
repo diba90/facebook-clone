@@ -43,6 +43,21 @@ export default function Login() {
     margin: "10% 27% 0 27%",
     border: "solid 1px #f2f2f2",
     borderRadius: "14px",
+    "@media (max-width: 768px)": {
+      height: "auto",
+      width: "100%",
+      padding: "0",
+      margin: "50px 0 0 0",
+    },
+  };
+
+  const collapse_style = {
+    width: "50%",
+    margin: "0 27%",
+    "@media (max-width: 768px)": {
+      width: "100%",
+      margin: "0",
+    },
   };
 
   const dispatch = useDispatch();
@@ -131,12 +146,8 @@ export default function Login() {
   return (
     <React.Fragment>
       <Container fixed>
-        <Collapse style={{ width: "100%" }} in={visible}>
-          <Alert
-            style={{ width: "50%", margin: "0 27%" }}
-            variant="filled"
-            severity={alertSeverity}
-          >
+        <Collapse sx={collapse_style} in={visible}>
+          <Alert sx={collapse_style} variant="filled" severity={alertSeverity}>
             {alertText}
           </Alert>
         </Collapse>

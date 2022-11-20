@@ -44,7 +44,38 @@
   color: #ffffff;
 }
 
+.outlet__block {
+  margin: "0 25%";
+}
+
 .post_input_field {
   width: 100%;
   font-size: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .outlet__block {
+    margin: "0 15px";
+  }
+
+  .header__logo {
+    width: 28%;
+  }
+
+  .header__section {
+    display: flex;
+    padding: 15px 15px;
+  }
+
+  .header__greeting__message {
+    width: 100%;
+    float: left;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: right;
+    position: absolute;
+    top: 85px;
+    margin: auto;
+  }
 }

@@ -12,12 +12,19 @@ const MessageWindow = () => {
     return state.message.messages;
   });
 
+  const grid_style = {
+    margin: "0 25%",
+    "@media (max-width: 768px)": {
+      margin: "0 15px",
+    },
+  };
+
   return (
     <React.Fragment>
       <Header id={3} />
-      <Grid item style={{ margin: "0 25%" }}>
+      <Grid item sx={grid_style}>
         <Grid container style={{ padding: "20px 0" }}>
-          <h2 className="title text-3xl font-bold text-cyan-900">
+          <h2 className="title text-3xl font-bold text-cyan-900 mt-16">
             Messaging Module
           </h2>
         </Grid>

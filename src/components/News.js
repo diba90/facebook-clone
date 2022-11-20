@@ -10,6 +10,19 @@ const News = () => {
   const [news, setNews] = useState(null);
   const [spinner, setSpinner] = useState(false);
 
+  const grid_style = {
+    margin: "0 25%",
+    "@media (max-width: 768px)": {
+      margin: "0 15px",
+    },
+  };
+
+  const mt50 = {
+    "@media (max-width: 768px)": {
+      marginTop: "50px",
+    },
+  };
+
   useEffect(() => {
     setSpinner(true);
     let timer = setTimeout(() => {
@@ -34,8 +47,8 @@ const News = () => {
   return (
     <React.Fragment>
       <Header id={2} />
-      <Grid item style={{ margin: "0 25%" }}>
-        <Grid container spacing={2}>
+      <Grid item sx={grid_style}>
+        <Grid container spacing={8}>
           <Grid item xs={12}>
             {spinner ? (
               <Box

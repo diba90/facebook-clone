@@ -22,7 +22,7 @@ const Main = () => {
   return (
     <React.Fragment>
       <Header />
-      <Outlet style={{ margin: "0 25%" }} />
+      <Outlet className="outlet__block" />
     </React.Fragment>
   );
 };

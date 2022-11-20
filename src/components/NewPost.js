@@ -16,6 +16,19 @@ const NewPost = () => {
   const [picUrl, setPicUrl] = useState("");
   const [displayText, setDisplayText] = useState("Add Photo for your Post");
 
+  const grid_style = {
+    margin: "0 25%",
+    "@media (max-width: 768px)": {
+      margin: "0 15px",
+    },
+  };
+
+  const mt50 = {
+    "@media (max-width: 768px)": {
+      marginTop: "50px",
+    },
+  };
+
   var path = "";
 
   var loginData = useSelector((state) => {
@@ -62,10 +75,11 @@ const NewPost = () => {
   return (
     <React.Fragment>
       <Header id={1} />
-      <Grid item style={{ margin: "0 25%" }}>
+      <Grid item sx={grid_style}>
         <Grid container spacing={4}>
           <Grid item xs={12}>
             <TextField
+              sx={mt50}
               id="outlined-textarea"
               placeholder="What's on your mind !!"
               multiline

@@ -78,3 +78,9 @@
   font-weight: 600;
   color: #767271;
 }
+
+@media only screen and (max-width: 768px) {
+  .post_user_icon {
+    width: 20%;
+  }
+}
